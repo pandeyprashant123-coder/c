@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <conio.h>
+int main() {
+  // int a=5,b=2;
+  // float c;
+  // c=(float)a/b;//typecasting or
+  // //c=a/(float)b;
+  // printf("c=%f",c);
+
+  //unformated input output
+  // //single character
+  // char ch;
+  // printf("Enter the character:\n");
+  // ch=getche();
+  // printf("The character is:\n");
+  // putchar(ch);
+  //
+
+  //defining a input
+  char str[23];
+  printf("Enter the string");
+  gets(str);
+  puts("The string is:");
+  puts(str);
+
+
+ //formated input ouput
+  int a=100;
+  // printf("|%5d|",a);
+  // printf("|%2d|",a);
+  printf("|%-5d|",a);
+   return 0;
+}
