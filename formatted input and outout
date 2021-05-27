@@ -1,0 +1,47 @@
+#include <stdio.h>
+
+int main() {
+//----------formatted output--------
+//-->integers and float
+  // int a=10;
+  // float b=12.56;
+  // printf("%d\n",a);
+  // printf("%06d\n",a);
+  // printf("%-6d\n",a);
+  // printf("%15f\n",b);
+  // printf("%15.1f\n",b);
+  // printf("%-15.2f\n",b);
+  // printf("%015f\n",b);
+
+//-->string
+  // char st[100];
+  // char str[]="I love nepal";//inetiallizing string whrer str is variable name.
+  // printf("%s",str);
+  // printf("%20s",str);
+  // printf("%-20s",str);
+  // printf("%20.1s",str);
+  // printf("%20.3s",str);
+  // printf("%20.4s",str);
+  // printf("%20.5s",str);
+
+  //--------formatted input intrger-------------
+  // int a;
+  // printf("Enter the value of a:");
+  // scanf("%3d",a);
+  // printf("a=%d",a);
+
+  // int a,b;
+  // printf("enter two numbers");
+  // scanf("%d\t%d",&a,&b);
+  // printf("a=%d\tb=%d",a,b);
+  
+  
+ //--->string
+  char name[100];
+  printf("Enter your name:");
+  // scanf("%[a-z]s",name);//take only letters form a to z and dont print after value number is printed.
+  // scanf("%[^a-z]s",name);//reverse of above..^ -->refers ended until entered or not
+  scanf("%[^\n]s",name);//takes every type of input 
+  printf("HEllo! %s",name);
+  return 0;
+}
