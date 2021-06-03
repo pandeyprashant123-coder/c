@@ -11,3 +11,56 @@ int main(){
     printf("You can drive\n");
   }
 }
+
+-----print greater no and roots of quardatic equation------
+
+#include <stdio.h>
+#include<math.h>
+int main() {
+  //Write a nested if else to print the largest number
+
+  // int a,b,c;
+  // printf("Enter the numbers to find greater.\n");
+  // scanf("%d%d%d",&a,&b,&c);
+  // if(a>c){
+  //     if(a>b){
+  //       printf("%d is greater\n",a);
+  //     }
+  //     else{
+  //       printf("%d is greater\n",b);
+  //     }
+  // }
+  // else{
+  //   if(c>b){
+  //       printf("%d is greater\n",c);
+  //   }
+  //   else{
+  //       printf("%d is greater\n",b);
+  //   }
+  // }
+
+  //WAP to find the roots of quardatic equation
+
+  double a,b,c,r1,r2,r3,discrm,real,img;
+  printf("Enter the coefficient of the quardatic equation\n");
+  scanf("%lf%lf%lf",&a,&b,&c);
+  discrm=b*b-4.0*a*c;
+  if(discrm==0){
+    printf("Roots are real and equal\n");
+    r1=r2=-b/(2.0*a);
+    printf("Root1=%lf and Root2=%lf\n",r1,r2);
+  }
+  else if(discrm>0){
+    printf("Roots are real and unequal\n");
+    r1=(-b+sqrt(discrm))/(2.0*a);
+    r2=(-b-sqrt(discrm))/(2.0*a);
+    printf("Root1=%lf and Root2=%lf\n",r1,r2);
+  }
+  else{
+    printf("Roots are imaginery\n");
+    real=-b/(2.0*a);
+    img=sqrt(-discrm)/(2.0*a);
+    printf("Root1=%lf+%lfi and Root2=%lf-%lfi\n",real,img,real,img);
+  }
+  return 0;
+}
