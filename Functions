@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+int add(int a, int b) ////User defined functions
+{
+  int c;
+  c=a+b;
+  return c;
+}
+int main() 
+{
+  int a,b,c;
+  printf("Enter a and b\n");
+  scanf("%d%d",&a,&b);
+  c=add(a,b);
+  printf("%d",c);
+  return 0;
+}
+
+---------printing factorial-------------------recurssive function--------
+#include <stdio.h>
+
+long factorial(int n)
+{
+  if (n==1){
+    return 1;
+  }
+  else
+  {
+    return (n*factorial(n-1)); ///returns n*(n-1)! recurssively
+  }
+}
+int main() 
+{
+  int a,c;
+  printf("Enter a\n");
+  scanf("%d",&a);
+  c=factorial(a);
+  printf("%d",c);
+  return 0;
+}
+
