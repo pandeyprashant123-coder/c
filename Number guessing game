@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() 
+{
+  int i=18,num,count=9;
+  printf("Welcome! to number guessing game..\nGuess the number hidden in the program\n");
+  while(count<10)
+  {
+    scanf("%d",&num);
+    if(num>i)
+    {
+      printf("Number is smaller.\n");
+    }
+    else if(num<i)
+    {
+      printf("Number is greater.\n");
+    }
+    else
+    {
+      printf("Congratulation!..You guessed the correct answer\n");
+      break;
+    }
+    printf("%d guesses left\n",count);
+    count--;
+    if(count==-1)
+    {
+      printf("You lost the game\n");
+      break;
+    }
+  }
+  return 0;
+}
