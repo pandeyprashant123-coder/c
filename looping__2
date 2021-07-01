@@ -1,0 +1,86 @@
+---------------------------printing no of digits and sum of digits---------------------------------------
+#include <stdio.h>
+
+int main() {
+  int n=33;
+  int count=0,rem,sum=0;
+  while(n!=0)
+  {
+    rem=n%10;
+    n=n/10;
+    sum+=rem;
+    count++;
+  }
+  printf("%d\t%d",count,sum);
+
+
+  return 0;
+}
+
+---------------------star pattern printing--------------------------
+/////row and column
+#include <stdio.h>
+
+int main() {
+  int i,j,n;
+  printf("Enter the valur of n for star pattern printing:");
+  scanf("%d",&n);
+  for(i=1;i<=n;i++)
+  {
+    for(j=1;j<=n;j++)
+    { 
+      printf("* ");
+    }
+    printf("\n");
+  }
+  return 0;
+}
+
+
+////Nepal flag pattern
+#include <stdio.h>
+
+int main() {
+  int i,j,n=5;
+  for(i=1;i<=n;i++)
+  {
+    for(j=1;j<=i;j++)
+    { 
+      printf("* ");
+    }
+    printf("\n");
+  }
+  for(i=1;i<=n;i++)
+  {
+    for(j=1;j<=i;j++)
+    { 
+      printf("* ");
+    }
+    printf("\n");
+  }
+  return 0;
+}
+
+///triangle pattern
+
+#include <stdio.h>
+
+int main() {
+  int i,j,s,n;
+  printf("Enter the valur of n for star pattern printing:");
+  scanf("%d",&n);
+  for(i=1;i<=n;i++)
+  {
+    for(s=1;s<=n-i;s++)
+    {
+      printf(" ");
+    }
+    for(j=1;j<=i;j++)
+    { 
+      printf("* ");
+    }
+    printf("\n");
+  }
+  
+  return 0;
+}
