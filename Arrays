@@ -1,0 +1,32 @@
+-------------sorting the integers in arrays in ascending order-----------
+#include<stdio.h>
+void asc_sort(int a[],int n)
+{
+  int i,j,temp,k;
+  for(i=0;i<n-1;i++)
+  {
+    for(j=i+1;j<n;j++)
+    {
+      if(a[i]>a[j])
+      {
+        temp=a[i];
+        a[i]=a[j];
+        a[j]=temp;
+      }
+    }
+  }
+  printf("The numbers in ascending order are:\n");
+  for(k=0;k<n;k++)
+    printf("%d",a[k]);
+}
+int main(){
+  int a[20] ,n,i,q;
+  printf("Enter the number of integer:");
+  scanf("%d",&n);
+  printf("Enter the intergers:\n");
+  for(i=0;i<n;i++)
+    scanf("%d",&a[i]);
+  asc_sort(a,n);
+
+  return 0;
+}
