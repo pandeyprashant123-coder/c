@@ -1,0 +1,45 @@
+--------Adding two matrices-------------
+#include <stdio.h>
+void add_matrix(int a[3][3],int b[3][3])//a function
+{
+  int c[3][3],i,j;
+  for(i=0;i<3;i++)
+  {
+    for(j=0;j<3;j++)
+    {
+      c[i][j]=a[i][j]+b[i][j];
+    }
+  }
+  printf("the addition of matrix is:\n");
+  for(i=0;i<3;i++)
+  {
+    for(j=0;j<3;j++)
+    {
+      printf("%d ",c[i][j]);
+    }
+    printf("\n");
+  }
+}
+
+int main() 
+{
+  int a[3][3],b[3][3],i,j,k,l;
+  printf("Enter the value for a matrix:\n");
+  for(i=0;i<3;i++)
+  {
+    for(j=0;j<3;j++)
+    {
+      scanf("%d",&a[i][j]);
+    }
+  }
+  printf("Enter the value for b matrix:\n");
+  for(k=0;k<3;k++)
+  {
+    for(l=0;l<3;l++)
+    {
+      scanf("%d",&b[l][k]);
+    }
+  }
+  add_matrix(a,b);
+  return 0;
+}
